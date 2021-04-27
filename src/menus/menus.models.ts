@@ -1,14 +1,14 @@
 import * as mongoose from 'mongoose';
 
-export const OrdersSchema = new mongoose.Schema({
-  title: { type: String, required: true },
+export const MenusSchema = new mongoose.Schema({
+  name: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
 });
 
-export interface Order extends mongoose.Document {
+export interface Menu extends mongoose.Document {
   id: string;
-  title: string;
+  name: string;
   description: string;
   price: number;
 }
